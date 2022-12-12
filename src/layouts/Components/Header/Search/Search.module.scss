@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.input{
+    border: none;
+    outline: none;
+    margin-right: 12px;
+    height: 18px;
+    background-color: #cbb9b9;
+    font-size: 1.4rem;
+}
+
+.input:focus{
+    border-bottom: 1px solid #ff9c25;
+}
+
+
+.input-label{
+    cursor: pointer;
+}

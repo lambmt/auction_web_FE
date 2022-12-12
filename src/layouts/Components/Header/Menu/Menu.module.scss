@@ -1,0 +1,12 @@
+.item-link{
+    text-decoration: none;
+    color: #000;
+
+    &:hover{
+        color: #4a64e7;
+    }
+}
+
+.item-link.active {
+    color: #4a64e7;
+}

@@ -1,0 +1,57 @@
+.wrapper{
+    height: var(--height-header);
+    padding: 0 100px;
+    background-color: #cbb9b9;
+    border-bottom: 1px solid #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999999999;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: end;
+    padding-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.route{
+    display: flex;
+}
+
+.logo{
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+}
+
+.item{
+    padding: 0 20px;
+}
+
+.handle{
+    display: flex;
+    gap: 40px;
+    font-size: 1.6rem;
+}
+
+.search{
+
+}
+
+.auction{
+    cursor: pointer;
+}
+
+.account{
+    color: #000;
+    cursor: pointer;
+}
