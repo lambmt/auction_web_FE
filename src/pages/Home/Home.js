@@ -1,8 +1,10 @@
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
+import config from '~/config';
 
 import Slider from './Slider';
 import LiveAuction from './LiveAuction';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -12,6 +14,10 @@ function Home() {
         <div className={cx('container')}>
             <Slider />
             <LiveAuction />
+
+            <div className={cx('view-all')}>
+                <Link to={config.routes.product} className={cx('to')}>View All</Link>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,106 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.img{
+
+    img{
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+    }
+}
+
+.info{
+    padding: 0 16px 24px;
+    font-size: 1.5rem;
+}
+
+.name,
+.price{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+    margin-top: 10px;
+    color: rgb(114, 111, 111);
+}
+
+.name-name{
+    text-decoration: none;
+    color: #000;
+}
+
+.name-time{
+    color: #ff9c25;
+
+    i{
+        color: #000;
+        margin-right: 10px;
+    }
+}
+
+.price-quantity{
+
+    i{
+        color: #000;
+        margin-right: 10px;
+    }
+}
+
+.sender{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    overflow: hidden;
+    height: 18px;
+    width: 18px;
+    animation: sliderSenderReverse .2s ease;
+}
+
+.sender:hover{
+    animation: sliderSender .8s ease forwards;
+}
+
+.avatar{
+    width: 18px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.name-sender{
+    font-size: 1rem;
+    background-color: #ff9c25;
+    padding: 0 14px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #000;
+    height: 18px;
+    line-height: 1.8rem;
+}
+
+@keyframes sliderSender {
+    0%{
+        width: 18px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes sliderSenderReverse {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 18px;
+    }
+}
