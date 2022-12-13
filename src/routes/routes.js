@@ -5,6 +5,7 @@ import Product from "~/pages/Product";
 import Login from "~/pages/Login";
 import Contact from "~/pages/Contact";
 import ForgottenPassword from "~/pages/ForgottenPassword";
+import DetailProduct from "~/pages/DetailProduct";
 
 const publicRoutes = [
     {
@@ -26,6 +27,10 @@ const publicRoutes = [
     {
         path: config.routes.forgottenPassword,
         component: ForgottenPassword,
+    },
+    {
+        path: config.routes.detailProduct,
+        component: DetailProduct,
     },
 ];
 

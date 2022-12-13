@@ -4,6 +4,7 @@ const routes = {
     contact: "/contact",
     login: "/login",
     forgottenPassword: "/forgottenPassword",
+    detailProduct: "/detailProduct",
 }
 
 export default routes;
