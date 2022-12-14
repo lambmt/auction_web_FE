@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
+import logo from '~/assets/images/logo.png';
 
 import Menu from './Menu';
 import Search from './Search';
@@ -15,7 +16,7 @@ function Header() {
             <div className={cx('container')}>
                 <div className={cx('route')}>
                     <Link to={config.routes.home} className={cx('logo')}>
-                        <div>Logo</div>
+                        <img alt="Logo" src={logo} />
                     </Link>
 
                     <ul className={cx('list')}>

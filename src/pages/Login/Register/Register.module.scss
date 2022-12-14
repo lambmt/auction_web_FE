@@ -1,5 +1,5 @@
 .form{
-    height: 450px;
+    height: 650px;
     width: 100%;
 }
 
@@ -88,3 +88,11 @@
     color: var(--primary-color);
     text-decoration: none;
 }
+
+.vendor{
+    height: 0px; //130px
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+

@@ -40,7 +40,7 @@
 }
 
 .name-time{
-    color: #ff9c25;
+    color: var(--primary-color);
 
     i{
         color: #000;
@@ -82,7 +82,7 @@
 
 .name-sender{
     font-size: 1rem;
-    background-color: #ff9c25;
+    background-color: var(--primary-color);
     padding: 0 14px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;

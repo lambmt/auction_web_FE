@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './DetailProduct.module.scss';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 import ImgProduct from './ImgProduct';
 import DataProduct from './DataProduct';
@@ -24,7 +26,7 @@ function DetailProduct() {
         name: 'Name product',
         startBid: 150,
         condition: 'USED',
-        auctionEnds: 'October 31, 2023 12:00 am',
+        auctionEnds: 'January 31, 2023 12:00:00',
         timeLeft: '',
         currentBid: 231,
         stepPrice: 5,
@@ -52,6 +54,10 @@ function DetailProduct() {
                 <div className={cx('title')}>Similar Items</div>
                 <SimilarProduct data={data} />
             </Container>
+
+            <div className={cx('view-all')}>
+                <Link to={config.routes.product} className={cx('to')}>View All</Link>
+            </div>
         </div>
     );
 }

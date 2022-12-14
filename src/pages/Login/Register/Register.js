@@ -86,9 +86,40 @@ function Register() {
                 <span className={cx('form-message')}></span>
             </div>
 
+            <div className={cx('vendor')}>
+                <div className={cx('form-group')}>
+                    <input
+                        id="shopName"
+                        rules="required"
+                        name="shopName"
+                        type="text"
+                        className={cx('form-control')}
+                        placeholder="Shop Name"
+                    />
+                    <span className={cx('form-message')}></span>
+                </div>
+    
+                <div className={cx('form-group')}>
+                    <input
+                        id="shopAddress"
+                        rules="required"
+                        name="shopAddress"
+                        type="text"
+                        className={cx('form-control')}
+                        placeholder="Shop Address"
+                    />
+                    <span className={cx('form-message')}></span>
+                </div>
+            </div>
+
             <div className={cx('form-group-checkbox')}>
                 <input id="password" name="" type="checkbox" className={cx('form-control-checkbox')} />
-                <p className={cx('text')}>I agree to all the <Link className={cx('policy')}>Prvacy Policy</Link></p>
+                <p className={cx('text')}>I am a vendor</p>
+            </div>
+
+            <div className={cx('form-group-checkbox')}>
+                <input id="password" name="" type="checkbox" className={cx('form-control-checkbox')} />
+                <p className={cx('text')}>I am a customerer</p>
             </div>
 
             <button className={cx('form-submit')}>Create Account</button>
