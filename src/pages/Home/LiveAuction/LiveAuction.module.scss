@@ -1,22 +1,45 @@
 .wrapper{
-    margin-top: 40px;
+    margin-top: 100px;
     padding: 0 80px;
 }
 
 .text-header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+
+    i{
+        margin-top: 10px;
+        font-size: 2rem;
+        color: rgb(228, 152, 30);
+    }
+    
 }
 
 .title{
     letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    position: relative;
 }
 
-.to-view{
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 1.4rem;
+.title::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -60px;
+    width: 150px;
+    height: 1.5px;
+    background-color: rgb(176, 162, 162);
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -60px;
+    width: 150px;
+    height: 1.5px;
+    background-color: rgb(176, 162, 162);
 }
 
 .grid{
@@ -41,5 +64,10 @@
 .l-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+}
+
+.l-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 

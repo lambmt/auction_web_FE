@@ -26,7 +26,7 @@ function DetailProduct() {
         name: 'Name product',
         startBid: 150,
         condition: 'USED',
-        auctionEnds: 'January 31, 2023 12:00:00',
+        auctionEnds: 'January 10, 2023 23:59:30',
         timeLeft: '',
         currentBid: 231,
         stepPrice: 5,

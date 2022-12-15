@@ -1,12 +1,16 @@
 .wrapper {
     display: flex;
     align-items: center;
-    padding: 0 14px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    padding: 6px 0px 6px 50px;
+    font-size: 1.5rem;
+    background-color: #fff;
+    margin-right: 100px;
+    border-radius: 20px;
+    position: relative;
 }
 
 .input{
+    padding-right: 80px;
     border: none;
     outline: none;
     margin-right: 12px;
@@ -15,11 +19,15 @@
     font-size: 1.4rem;
 }
 
-.input:focus{
-    border-bottom: 1px solid rgb(49, 47, 47);
-}
-
-
 .input-label{
+    position: absolute;
+    right: 0;
     cursor: pointer;
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }

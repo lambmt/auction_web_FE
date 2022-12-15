@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Register.module.scss';
+import { useRef, useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import config from '~/config';
@@ -8,6 +9,28 @@ const cx = classNames.bind(styles);
 
 
 function Register() {
+
+    const aVendor = useRef();
+    const aCustomer = useRef();
+    const vendor = useRef();
+    const [checkVendor, setCheckVendor] = useState(false);
+    const [checkCustomer, setCheckCustomer] = useState(true);
+
+    useEffect(() => {
+
+    });
+
+    const handleVendor = (e) => {
+        setCheckVendor(aVendor.current.checked);
+        setCheckCustomer(aCustomer.current.checked);
+        if(aVendor.current.checked === true){
+            vendor.current.style.height = '130px';
+        } else {
+            vendor.current.style.height = '0px';
+        }
+    }
+
+
     return (
         <form id="register" className={cx('form')} action="" method="POST">
             <div className={cx('form-group-name')}>
@@ -86,7 +109,7 @@ function Register() {
                 <span className={cx('form-message')}></span>
             </div>
 
-            <div className={cx('vendor')}>
+            <div ref={vendor} className={cx('vendor')}>
                 <div className={cx('form-group')}>
                     <input
                         id="shopName"
@@ -113,12 +136,12 @@ function Register() {
             </div>
 
             <div className={cx('form-group-checkbox')}>
-                <input id="password" name="" type="checkbox" className={cx('form-control-checkbox')} />
+                <input onClick={handleVendor} checked={checkVendor} ref={aVendor} id="aVender" name="option" type="radio" className={cx('form-control-checkbox')} />
                 <p className={cx('text')}>I am a vendor</p>
             </div>
 
             <div className={cx('form-group-checkbox')}>
-                <input id="password" name="" type="checkbox" className={cx('form-control-checkbox')} />
+                <input onClick={handleVendor} checked={checkCustomer} ref={aCustomer} id="aCustomer" name="option" type="radio" className={cx('form-control-checkbox')} />
                 <p className={cx('text')}>I am a customerer</p>
             </div>
 
