@@ -1,9 +1,10 @@
 import classNames from 'classnames/bind';
 import styles from './BannerCondition.module.scss';
-
 import config from '~/config';
+
 import banner1 from '~/assets/images/bannerCondition1.jpg';
 import banner2 from '~/assets/images/bannerCondition2.jpg';
+import { Link } from 'react-router-dom';
 
 
 const cx = classNames.bind(styles);
@@ -17,7 +18,7 @@ function BannerCondition() {
                     <div className={cx('text')}>
                         <div className={cx('title')}>NEW PRODUCT</div>
                         <div className={cx('quantity')}>29 Auctions</div>
-                        <button className={cx('btn')}>view more</button>
+                        <Link to={config.routes.detailProduct}><button className={cx('btn')}>view more</button></Link>
                     </div>
                 </div>
 
@@ -26,7 +27,7 @@ function BannerCondition() {
                     <div className={cx('text')}>
                         <div className={cx('title')}>USED PRODUCT</div>
                         <div className={cx('quantity')}>29 Auctions</div>
-                        <button className={cx('btn')}>view more</button>
+                        <Link to={config.routes.detailProduct}><button className={cx('btn')}>view more</button></Link>
                     </div>
                 </div>
             </div>
