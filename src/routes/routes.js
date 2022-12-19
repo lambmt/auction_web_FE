@@ -7,6 +7,13 @@ import Contact from "~/pages/Contact";
 import ForgottenPassword from "~/pages/ForgottenPassword";
 import DetailProduct from "~/pages/DetailProduct";
 
+
+import Live from "~/pagesVendor/Live";
+import Add from "~/pagesVendor/Add";
+import Shop from "~/pagesVendor/Shop";
+import WaitConfirmation from "~/pagesVendor/WaitConfirmation";
+
+
 const publicRoutes = [
     {
         path: config.routes.home,
@@ -34,6 +41,25 @@ const publicRoutes = [
     },
 ];
 
+const vendorRoutes = [
+    {
+        path: config.routes.vendorLive,
+        component: Live,
+    },
+    {
+        path: config.routes.vendorAdd,
+        component: Add,
+    },
+    {
+        path: config.routes.vendorShop,
+        component: Shop,
+    },
+    {
+        path: config.routes.vendorWaitConfirmation,
+        component: WaitConfirmation,
+    },
+];
+
 const privateRoutes = [];
 
-export { publicRoutes, privateRoutes };
+export { publicRoutes, privateRoutes, vendorRoutes };

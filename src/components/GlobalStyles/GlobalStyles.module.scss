@@ -2,7 +2,7 @@
 
 :root {
     --primary-background-color: #244D61;
-    --primary-color: #244D61;
+    --primary-color: #557687;
     --primary-text-color: #222;
     --primary-color-hover: #6c7ae0;
 
@@ -34,7 +34,7 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     overflow-y: overlay;
-    background-color: rgb(239, 233, 233);
+    background: rgba(204, 231, 242, 0.4);
 }
 
 ul {

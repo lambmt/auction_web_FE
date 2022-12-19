@@ -30,35 +30,6 @@
     }
 }
 
-.time-left{
-    display: flex;
-    box-shadow: 0px 0px 2px rgb(202, 179, 179);
-    border-radius: 4px;
-    padding: 8px 0px;
-    margin-top: 10px;
-}
-
-.time{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60px;
-}
-
-.time:not(:first-child) {
-    border-left: 1px solid rgb(214, 196, 196);
-}
-
-.time-num{
-    font-size: 1.8rem;
-}
-
-.time-text{
-    font-size: 1.2rem;
-    color: rgb(108, 103, 103);
-}
-
-
 .info{
     padding: 0 16px 24px;
     font-size: 1.5rem;
@@ -67,19 +38,44 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .name-name{
     text-decoration: none;
+    align-self: center;
     color: #000;
     margin-top: 10px;
     font-weight: 600;
+    padding-bottom: 10px;
 }
 
-.current-bid{
+.step-price,
+.item-condition,
+.auction-ends,
+.start-bid{
     font-size: 1.4rem;
     margin-top: 4px;
+
+    display: flex;
+
+    p{
+        margin-left: 10px;
+        font-weight: 550;
+    }
+}
+
+
+.auction-ends{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+
+    span{
+        align-self: center;
+        font-weight: 550;
+    }
 }
 
 .sender{
@@ -140,17 +136,3 @@
     }
 }
 
-.icon-auction{
-    position: absolute;
-    top: 60px;
-    left: 12px;
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    color: #000;
-    align-items: center;
-    width: 28px;
-    height: 28px;
-    box-shadow: 0px 0px 4px rgb(117, 100, 100);
-    border-radius: 4px;
-}

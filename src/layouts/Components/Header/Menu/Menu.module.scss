@@ -4,9 +4,11 @@
 
     &:hover{
         color: #e5efef;
+        text-shadow: 0px 0px 2px rgb(75, 38, 38);
     }
 }
 
 .item-link.active {
     color: #e5efef;
+    text-shadow: 0px 0px 2px rgb(75, 38, 38);
 }

@@ -142,7 +142,7 @@ function Register() {
 
             <div className={cx('form-group-checkbox')}>
                 <input onClick={handleVendor} checked={checkCustomer} ref={aCustomer} id="aCustomer" name="option" type="radio" className={cx('form-control-checkbox')} />
-                <p className={cx('text')}>I am a customerer</p>
+                <p className={cx('text')}>I am a customer</p>
             </div>
 
             <button className={cx('form-submit')}>Create Account</button>

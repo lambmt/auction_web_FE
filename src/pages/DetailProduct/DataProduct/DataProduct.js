@@ -170,7 +170,11 @@ function DataProduct({ data }) {
                     $
                 </div>
                 <div onClick={handleRaise} className={cx('raise')}><i class="fa-solid fa-plus"></i></div>
-                <button className={cx('bid')}>Bid</button>
+                {
+                    localStorage.getItem('privilege') === 'vendor' ? 
+                    "" :
+                    <button className={cx('bid')}>Bid</button>
+                }
             </div>
         </div>
     );

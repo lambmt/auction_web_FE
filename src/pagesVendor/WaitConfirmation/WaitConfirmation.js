@@ -1,6 +1,6 @@
-import classNames from "classnames/bind";
-import styles from './LiveAuction.module.scss';
-import InfoProduct from "~/components/InfoProduct";
+import classNames from 'classnames/bind';
+import styles from './WaitConfirmation.module.scss';
+
 
 import product1 from "~/assets/images/product1.jpg";
 import product2 from "~/assets/images/product2.jpg";
@@ -13,10 +13,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import ProductWaitConfirmation from './ProductWaitConfirmation';
+
 const cx = classNames.bind(styles);
 
-
-function LiveAuction() {
+function WaitConfirmation() {
 
     var data = {
         id: 1,
@@ -56,23 +57,13 @@ function LiveAuction() {
 
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('text-header')}>
-                <div className={cx('title')}>latest auctions</div>
-                <i class="fa-sharp fa-solid fa-gavel"></i>
-            </div>
             <Container className={cx('grid')}>
                 <Row className={cx('row')}>
                     <Col className={cx('col', 'l-3')}>
-                        <InfoProduct data={data} />
+                        <ProductWaitConfirmation data={data} />
                     </Col>
                     <Col className={cx('col', 'l-3')}>
-                        <InfoProduct data={data1} />
-                    </Col>
-                    <Col className={cx('col', 'l-3')}>
-                        <InfoProduct data={data} />
-                    </Col>
-                    <Col className={cx('col', 'l-3')}>
-                        <InfoProduct data={data1} />
+                        <ProductWaitConfirmation data={data1} />
                     </Col>
                 </Row>
             </Container>
@@ -80,4 +71,4 @@ function LiveAuction() {
     );
 }
 
-export default LiveAuction;
+export default WaitConfirmation;
