@@ -140,6 +140,7 @@ function InfoProduct({ data }) {
 
             <Link to={config.routes.detailProduct} className={cx('icon-auction')}>
                 <i class="fa-sharp fa-solid fa-gavel"></i>
+                <div className={cx('auction-sender')}>Add bid now</div>
             </Link>
 
         </div>

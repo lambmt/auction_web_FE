@@ -1,14 +1,15 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import logo from '~/assets/images/logo.png';
+import avatar from '~/assets/images/user.png';
 import Tippy from '@tippyjs/react/headless';
 
 import Menu from './Menu';
 import Search from './Search';
 import config from '~/config';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -48,6 +49,23 @@ function Header() {
         );
     };
 
+    const handleLogout = () => {
+        var login = 'false';
+        localStorage.setItem('login', login);
+        window.location.reload();
+    }
+
+
+    const [showNavbar, setShowNavbar] = useState('no-show');
+    const handleAvatar = (e) => {
+        if(showNavbar === 'no-show'){
+            setShowNavbar('show');
+        } else {
+            setShowNavbar('no-show');
+        }
+    }
+
+
     return (
         <header ref={handleWrapper} className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -67,7 +85,7 @@ function Header() {
                             <Menu title='Contact' to={config.routes.contact} />
                         </li>
                         {
-                            localStorage.getItem('privilege') === 'vendor' ?
+                            localStorage.getItem('privilege') === 'vendor' && localStorage.getItem('login') === 'true' ?
                             <Tippy interactive
                                 offset={[116, 4]}
                                 placement="bottom-end" 
@@ -87,13 +105,46 @@ function Header() {
                         <Search />
                     </div>
 
-                    <div className={cx('auction')}>
-                        <i class="fa-sharp fa-solid fa-gavel"></i>
-                    </div>
+                    {
+                        localStorage.getItem('privilege') === 'vendor' && localStorage.getItem('login') === 'true' ?
+                        "" :
+                        <NavLink to={config.routes.customerAuctionting} className={(active) => cx('item-link', 'auction', {active: active.isActive})}>
+                            <i class="fa-sharp fa-solid fa-gavel"></i>
+                        </NavLink>
+                    }
 
-                    <Link to={config.routes.login} className={cx('account')}>
-                        <i class="fa-regular fa-user"></i>
-                    </Link>
+                    {
+                        localStorage.getItem('login') === 'false' ?
+                        <Link to={config.routes.login} className={cx('account')}>
+                            <i class="fa-regular fa-user"></i>
+                        </Link> :
+                        (
+                            localStorage.getItem('privilege') === 'vendor' || localStorage.getItem('privilege') === 'customer' ?
+                                <div onClick={(e) => handleAvatar()} className={cx('avatar')}>
+                                    <img alt="avatar" src={avatar} />
+                                    <ul className={cx('list-login', showNavbar)}>
+                                        {
+                                            localStorage.getItem('privilege') === 'customer' ? 
+                                            <li className={cx('item-login')}>
+                                                <Menu title='Information' to={config.routes.customerInformation} />
+                                            </li> : ""
+                                        }
+                                        {
+                                            localStorage.getItem('privilege') === 'customer' ? 
+                                            <li className={cx('item-login')}>
+                                                <Menu title='Orders' to={config.routes.customerOrders} />
+                                            </li> : ""
+                                        }
+                                        <li onClick={handleLogout} className={cx('item-login')}>
+                                            <NavLink className={cx('nav-link')} to={config.routes.home}>
+                                                Log out
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </NavLink>
+                                        </li>
+                                    </ul>
+                                </div> : ""
+                        )
+                    }
                 </div>
             </div>
         </header>

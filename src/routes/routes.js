@@ -14,6 +14,12 @@ import Shop from "~/pagesVendor/Shop";
 import WaitConfirmation from "~/pagesVendor/WaitConfirmation";
 
 
+import Information from "~/pagesCustomer/Information";
+import Orders from "~/pagesCustomer/Orders";
+import ViewOrders from "~/pagesCustomer/ViewOrders";
+import Auctionting from "~/pagesCustomer/Auctionting";
+
+
 const publicRoutes = [
     {
         path: config.routes.home,
@@ -60,6 +66,25 @@ const vendorRoutes = [
     },
 ];
 
+const customerRoutes = [
+    {
+        path: config.routes.customerInformation,
+        component: Information,
+    },
+    {
+        path: config.routes.customerOrders,
+        component: Orders,
+    },
+    {
+        path: config.routes.customerViewOrder,
+        component: ViewOrders,
+    },
+    {
+        path: config.routes.customerAuctionting,
+        component: Auctionting,
+    },
+]
+
 const privateRoutes = [];
 
-export { publicRoutes, privateRoutes, vendorRoutes };
+export { publicRoutes, privateRoutes, vendorRoutes, customerRoutes };
