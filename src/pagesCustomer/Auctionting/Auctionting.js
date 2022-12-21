@@ -54,6 +54,7 @@ function Auctionting() {
 
     return (
         <div className={cx('wrapper')}>
+            <div className={cx('title')}>Auctioning</div>
             <div className={cx('live')}>
                 <div className={cx('product')}>
                     <InfoProduct data={data} />

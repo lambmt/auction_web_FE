@@ -38,7 +38,7 @@ function App() {
                     })}
 
                     {customerRoutes.map((route, index) => {
-                        var privilege = localStorage.getItem('privilege') === 'customer';
+                        var privilege = localStorage.getItem('privilege') === 'customer' && localStorage.getItem('login') === 'true';
                         var element = <DefaultLayout>
                                         <route.component />
                                     </DefaultLayout>;
