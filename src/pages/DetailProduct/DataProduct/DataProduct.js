@@ -2,6 +2,8 @@ import classNames from 'classnames/bind';
 import styles from './DataProduct.module.scss';
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -172,8 +174,9 @@ function DataProduct({ data }) {
                 <div onClick={handleRaise} className={cx('raise')}><i class="fa-solid fa-plus"></i></div>
                 {
                     localStorage.getItem('privilege') === 'vendor' ?
-                    "" :
-                    <button className={cx('bid')}>Bid</button>
+                    "" : localStorage.getItem('login') === 'true' ?
+                    <button className={cx('bid')}>Bid</button> :
+                    <Link className={cx('link-login')} to={config.routes.login}><button className={cx('bid-false')}>Bid</button></Link>
                 }
             </div>
         </div>
