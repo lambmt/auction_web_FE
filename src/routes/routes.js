@@ -19,6 +19,10 @@ import Orders from "~/pagesCustomer/Orders";
 import ViewOrders from "~/pagesCustomer/ViewOrders";
 import Auctionting from "~/pagesCustomer/Auctionting";
 
+import Dashboard from "~/pagesAdmin/Dashboard";
+import ViewAuction from "~/pagesAdmin/ViewAuction";
+import ListAccount from "~/pagesAdmin/ListAccount";
+
 
 const publicRoutes = [
     {
@@ -85,6 +89,19 @@ const customerRoutes = [
     },
 ]
 
-const privateRoutes = [];
+const privateRoutes = [
+    {
+        path: config.routes.adminDashboard,
+        component: Dashboard,
+    },
+    {
+        path: config.routes.adminViewAuction,
+        component: ViewAuction,
+    },
+    {
+        path: config.routes.adminListAccount,
+        component: ListAccount,
+    }
+];
 
 export { publicRoutes, privateRoutes, vendorRoutes, customerRoutes };

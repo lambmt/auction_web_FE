@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Live.module.scss';
 import InfoProduct from '~/components/InfoProduct';
 import AuctionHistory from './AuctionHistory';
+import AuctionDone from './AuctionDone';
 
 import product1 from '~/assets/images/product1.jpg';
 import product2 from '~/assets/images/product2.jpg';
@@ -52,20 +53,24 @@ function Live() {
 
 
     return (
-        <div className={cx('wrapper')}>
-            <div className={cx('live')}>
-                <div className={cx('product')}>
-                    <InfoProduct data={data} />
+        <div>
+            <div className={cx('wrapper')}>
+                <div className={cx('live')}>
+                    <div className={cx('product')}>
+                        <InfoProduct data={data} />
+                    </div>
+                    <AuctionHistory id={data.id} />
                 </div>
-                <AuctionHistory id={data.id} />
-            </div>
-
-            <div className={cx('live')}>
-                <div className={cx('product')}>
-                    <InfoProduct data={data1} />
+    
+                <div className={cx('live')}>
+                    <div className={cx('product')}>
+                        <InfoProduct data={data1} />
+                    </div>
+                    <AuctionHistory id={data1.id} />
                 </div>
-                <AuctionHistory id={data1.id} />
             </div>
+    
+            <AuctionDone />
         </div>
     );
 }

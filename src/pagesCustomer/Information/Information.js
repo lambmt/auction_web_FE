@@ -1,10 +1,37 @@
 import classNames from "classnames/bind";
 import styles from './Information.module.scss';
 
+import { useState, useEffect } from "react";
+
 
 const cx = classNames.bind(styles);
 
 function Information() {
+
+    const [fisrtName, setFisrtName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+
+    const [flat, setFlat] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
+
+    useEffect(() => {
+        console.log(fisrtName);
+        console.log(lastName);
+        console.log(phone);
+        console.log(email);
+
+        console.log(flat);
+        console.log(address);
+        console.log(city);
+        console.log(state);
+    })
+    
+
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('personal')}>
@@ -12,21 +39,21 @@ function Information() {
                 <div className={cx('row')}>
                     <div className={cx('wrapper-input')}>
                         <label for="firt-name">First Name</label>
-                        <input type="text" name="firt-name" id="firt-name" placeholder="First Name" />
+                        <input value={fisrtName} onChange={(e) => setFisrtName(e.target.value)} type="text" name="firt-name" id="firt-name" placeholder="First Name" />
                     </div>
                     <div className={cx('wrapper-input')}>
                         <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" />
+                        <input value={lastName} onChange={(e) => setLastName(e.target.value)} type="text" name="last-name" id="last-name" placeholder="Last Name" />
                     </div>
                 </div>
                 <div className={cx('row')}>
                     <div className={cx('wrapper-input')}>
                         <label for="phone-number">Phone Number</label>
-                        <input type="text" name="phone-number" id="phone-number" placeholder="Phone Number" />
+                        <input value={phone} onChange={(e) => setPhone(e.target.value)} type="text" name="phone-number" id="phone-number" placeholder="Phone Number" />
                     </div>
                     <div className={cx('wrapper-input')}>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" />
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" />
                     </div>
                 </div>
             </div>
@@ -36,21 +63,21 @@ function Information() {
                 <div className={cx('row')}>
                     <div className={cx('wrapper-input')}>
                         <label for="flat-plot">Flat / Plot</label>
-                        <input type="text" name="flat-plot" id="flat-plot" placeholder="Flat / Plot" />
+                        <input value={flat} onChange={(e) => setFlat(e.target.value)} type="text" name="flat-plot" id="flat-plot" placeholder="Flat / Plot" />
                     </div>
                     <div className={cx('wrapper-input')}>
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address" placeholder="Address" />
+                        <input value={address} onChange={(e) => setAddress(e.target.value)} type="text" name="address" id="address" placeholder="Address" />
                     </div>
                 </div>
                 <div className={cx('row')}>
                     <div className={cx('wrapper-input')}>
                         <label for="city">City</label>
-                        <input type="text" name="city" id="city" placeholder="City" />
+                        <input value={city} onChange={(e) => setCity(e.target.value)} type="text" name="city" id="city" placeholder="City" />
                     </div>
                     <div className={cx('wrapper-input')}>
                         <label for="region-state">Region / State</label>
-                        <input type="text" name="region-state" id="region-state" placeholder="Region / State" />
+                        <input value={state} onChange={(e) => setState(e.target.value)} type="text" name="region-state" id="region-state" placeholder="Region / State" />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
-import { Container, Row, Col } from 'react-bootstrap';
 import styles from './DetailProduct.module.scss';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 

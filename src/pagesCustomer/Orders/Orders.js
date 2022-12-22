@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
-import { Link } from "react-router-dom";
 import styles from './Orders.module.scss';
+import { Link } from "react-router-dom";
 import config from "~/config";
 
 
@@ -42,9 +42,10 @@ function Orders() {
                 <tr height="90" className={cx('head')}>
                     <th align="start" width="20%">ORDER NUMBER</th>
                     <th align="start" width="20%">DATE</th>
-                    <th align="start" width="20%">STATUS</th>
-                    <th align="start" width="20%">TOTAL</th>
-                    <th align="start" width="20%">ACTIONS</th>
+                    <th align="start" width="15%">STATUS</th>
+                    <th align="start" width="15%">TOTAL</th>
+                    <th align="start" width="15%">ACTIONS</th>
+                    <th align="start" width="15%">Confirm Order</th>
                 </tr>
 
                 {
@@ -57,6 +58,15 @@ function Orders() {
                             <td align="start">
                                 <Link to={config.routes.customerViewOrder} className={cx('link')}>View Order</Link>
                             </td>
+                            {
+                                data.status === 'Processing' ?
+                                <td align="start">
+                                    <div className={cx('wrapper-confirm')}>
+                                        <button className={cx('success')}><i class="fa-solid fa-check"></i></button>
+                                        <button className={cx('delete')}><i class="fa-solid fa-minus"></i></button>
+                                    </div>
+                                </td> : ""
+                            }
                         </tr>
                     )
                 }

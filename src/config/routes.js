@@ -15,6 +15,10 @@ const routes = {
     customerOrders: '/customer/orders',
     customerViewOrder: '/customer/viewOrder',
     customerAuctionting: '/customer/auctioning',
+
+    adminDashboard: '/admin/dashboard',
+    adminViewAuction: '/admin/viewAuction',
+    adminListAccount: '/admin/listAccount',
 }
 
 export default routes;

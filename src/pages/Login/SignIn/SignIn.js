@@ -3,16 +3,28 @@ import styles from './SignIn.module.scss';
 
 import { Link } from 'react-router-dom';
 import config from '~/config';
+import { useEffect, useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 
 function SignIn() {
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        console.log(email);
+        console.log(password);
+    })
+
+
     return (
-        <form id="sign-in" className={cx('form')} action="" method="POST">
+        <div id="sign-in" className={cx('form')}>
             <div className={cx('form-group')}>
                 <input
+                    value={email.trimStart()}
+                    onChange={(e) => {setEmail(e.target.value)}}
                     id="email"
                     rules="required|email"
                     name="email"
@@ -25,6 +37,8 @@ function SignIn() {
 
             <div className={cx('form-group')}>
                 <input
+                    value={password.trimStart()}
+                    onChange={(e) => {setPassword(e.target.value)}}
                     id="password"
                     rules="required|min:6"
                     name="password"
@@ -48,7 +62,7 @@ function SignIn() {
                     Reset password
                 </Link>
             </div>
-        </form>
+        </div>
     );
 }
 

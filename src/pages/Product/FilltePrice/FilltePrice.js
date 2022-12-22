@@ -41,7 +41,7 @@ function FilltePrice() {
             rangeSlider.current.style.right = `${100 - (valueMax/100)}%`;
         }
     }
-    
+
 
     return (
         <div className={cx('wrapper')}>

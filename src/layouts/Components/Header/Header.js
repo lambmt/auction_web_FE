@@ -135,6 +135,12 @@ function Header() {
                                                 <Menu title='Orders' to={config.routes.customerOrders} />
                                             </li> : ""
                                         }
+                                        <li className={cx('item-login')}>
+                                            <div className={cx('balance')}>
+                                                Balance
+                                                <span>1000 $</span>
+                                            </div>
+                                        </li>
                                         <li onClick={handleLogout} className={cx('item-login')}>
                                             <NavLink className={cx('nav-link')} to={config.routes.home}>
                                                 Log out

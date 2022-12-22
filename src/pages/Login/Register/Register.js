@@ -16,8 +16,27 @@ function Register() {
     const [checkVendor, setCheckVendor] = useState(false);
     const [checkCustomer, setCheckCustomer] = useState(true);
 
-    useEffect(() => {
+    const [fisrtName, setFisrtName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState("");
+    const [shopName, setShopName] = useState("");
+    const [shopAddress, setShopAddress] = useState("");
 
+    useEffect(() => {
+        console.log(fisrtName);
+        console.log(lastName);
+        console.log(phone);
+        console.log(email);
+        console.log(password);
+        console.log(passwordConfirm);
+        console.log(shopName);
+        console.log(shopAddress);
+
+        console.log(checkCustomer);
+        console.log(checkVendor);
     });
 
     const handleVendor = (e) => {
@@ -32,10 +51,12 @@ function Register() {
 
 
     return (
-        <form id="register" className={cx('form')} action="" method="POST">
+        <div id="register" className={cx('form')}>
             <div className={cx('form-group-name')}>
                 <div className={cx('form-group-fisrt')}>
                     <input
+                        value={fisrtName.trimStart()}
+                        onChange={(e) => setFisrtName(e.target.value)}
                         id="fisrtname"
                         rules="required"
                         name="fisrtname"
@@ -50,6 +71,8 @@ function Register() {
 
                 <div className={cx('form-group-last')}>
                     <input
+                        value={lastName.trimStart()}
+                        onChange={(e) => setLastName(e.target.value)}
                         id="lastname"
                         rules="required"
                         name="lastname"
@@ -63,6 +86,8 @@ function Register() {
 
             <div className={cx('form-group')}>
                 <input
+                    value={phone.trimStart()}
+                    onChange={(e) => setPhone(e.target.value)}
                     id="phone"
                     rules="required"
                     name="phone"
@@ -75,6 +100,8 @@ function Register() {
 
             <div className={cx('form-group')}>
                 <input
+                    value={email.trimStart()}
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email"
                     rules="required|email"
                     name="email"
@@ -87,6 +114,8 @@ function Register() {
 
             <div className={cx('form-group')}>
                 <input
+                    value={password.trimStart()}
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password"
                     rules="required|min:6"
                     name="password"
@@ -99,6 +128,8 @@ function Register() {
 
             <div className={cx('form-group')}>
                 <input
+                    value={passwordConfirm.trimStart()}
+                    onChange={(e) => setPasswordConfirm(e.target.value)}
                     id="confirmPassword"
                     rules="required|min:6"
                     name="confirmPassword"
@@ -112,6 +143,8 @@ function Register() {
             <div ref={vendor} className={cx('vendor')}>
                 <div className={cx('form-group')}>
                     <input
+                        value={shopName.trimStart()}
+                        onChange={(e) => setShopName(e.target.value)}
                         id="shopName"
                         rules="required"
                         name="shopName"
@@ -124,6 +157,8 @@ function Register() {
     
                 <div className={cx('form-group')}>
                     <input
+                        value={shopAddress.trimStart()}
+                        onChange={(e) => setShopAddress(e.target.value)}
                         id="shopAddress"
                         rules="required"
                         name="shopAddress"
@@ -153,7 +188,7 @@ function Register() {
                     Sign in
                 </Link>
             </div>
-        </form>
+        </div>
     );
 }
 

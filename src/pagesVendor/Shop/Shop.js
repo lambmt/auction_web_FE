@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Shop.module.scss';
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 
 const cx = classNames.bind(styles);
@@ -13,10 +13,25 @@ function Shop() {
     function handleImage(e) {
         const check = e.target.files[0];
         const urlImg = URL.createObjectURL(check);
+        setImg(urlImg);
 
         imageMain.current.src = urlImg;
         imageMain.current.style.zIndex = "10";
     }
+
+    const [img, setImg] = useState();
+    const [name, setName] = useState("");
+    const [address, setAddress] = useState("");
+    const [phone, setPhone] = useState("");
+
+    useEffect(() => {
+        console.log(img);
+
+        console.log(name);
+        console.log(address);
+        console.log(phone);
+
+    })
 
 
     return (
@@ -39,15 +54,15 @@ function Shop() {
                     <div className={cx('text')}>
                         <div className={cx('wrapper-input')}>
                             <label for="storeName">Store Name</label>
-                            <input type='text' id="storeName" placeholder='Store Name' />
+                            <input value={name} onChange={(e) => setName(e.target.value)} type='text' id="storeName" placeholder='Store Name' />
                         </div>
                         <div className={cx('wrapper-input')}>
                             <label for="address">Address</label>
-                            <input type='text' id="address" placeholder='Address' />
+                            <input value={address} onChange={(e) => setAddress(e.target.value)} type='text' id="address" placeholder='Address' />
                         </div>
                         <div className={cx('wrapper-input')}>
                             <label for="phone">Phone</label>
-                            <input type='text' id="phone" placeholder='Phone' />
+                            <input value={phone} onChange={(e) => setPhone(e.target.value)} type='text' id="phone" placeholder='Phone' />
                         </div>
                     </div>
                 </div>
