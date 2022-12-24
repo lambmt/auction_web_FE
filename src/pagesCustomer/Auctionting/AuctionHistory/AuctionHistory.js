@@ -63,7 +63,7 @@ function AuctionHistory({ id }) {
                 </tr>
             </table>
             {
-                statusAuction ? 
+                statusAuction ?
                 <div className={cx('status', 'largest')}>The auction price is the largest</div> :
                 <div className={cx('status', 'more')}>Have been auctioned more than</div>
             }

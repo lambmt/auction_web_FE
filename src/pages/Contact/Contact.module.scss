@@ -1,0 +1,91 @@
+.wrapper{
+    padding: 50px 240px 80px;
+}
+
+.title{
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.description{
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 170px;
+}
+
+.form{
+    margin-top: 50px;
+}
+
+.wrapper-input{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.first-name,
+.last-name,
+.email,
+.subject{
+    width: 40%;
+
+
+    input{
+        width: 100%;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        padding: 10px 0px;
+        font-size: 1.4rem;
+    }
+}
+
+.message{
+    margin-top: 80px;
+
+    input{
+        width: 100%;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        padding: 10px 0px;
+        font-size: 1.4rem;
+    }
+}
+
+.select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 0px;
+    outline: none;
+
+    option{
+        background-color: transparent;
+        color: #000;
+    }
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+    button{
+        border-radius: 2px;
+        padding: 12px 136px;
+        background-color: rgb(19, 36, 129);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+}

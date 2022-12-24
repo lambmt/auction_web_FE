@@ -3,71 +3,71 @@
 }
 
 .name{
-
+    color: #fff;
 }
 
 .start-bid{
     margin-top: 16px;
-    color: rgb(98, 94, 94);
+    color: #fff;
     font-size: 1.5rem;
 
     span{
         font-size: 1.7rem;
         font-weight: 600;
-        color: rgb(58, 56, 56);
+        color: #fff;
     }
 }
 
 .condition{
     margin-top: 26px;
-    color: rgb(72, 69, 69);
+    color: #fff;
     font-size: 1.5rem;
 
 }
 
 .auction-ends {
     margin-top: 8px;
-    color: rgb(72, 69, 69);
+    color: #fff;
     font-size: 1.5rem;
 
 }
 
 .time-left{
     margin-top: 8px;
-    color: rgb(21, 20, 20);
+    color: #fff;
     font-size: 1.5rem;
 }
 
 .current-bid{
     margin-top: 8px;
-    color: rgb(72, 69, 69);
+    color: #fff;
     font-size: 1.5rem;
 
     
     span{
         font-size: 1.7rem;
         font-weight: 600;
-        color: rgb(58, 56, 56);
+        color: #fff;
     }
 }
 
 .price-step{
     margin-top: 8px;
-    color: rgb(72, 69, 69);
+    color: #fff;
     font-size: 1.5rem;
 
     
     span{
         font-size: 1.7rem;
         font-weight: 600;
-        color: rgb(58, 56, 56);
+        color: #fff;
     }
 }
 
 .buy{
     display: flex;
     padding: 24px;
-    box-shadow: 0px 0px 2px rgb(71, 66, 66);
+    box-shadow: 0px 0px 2px #fff;
     border-radius: 6px;
     margin-top: 10px;
     justify-content: center;
@@ -75,7 +75,7 @@
 }
 
 .input-buy{
-    border: 1.4px solid rgb(209, 192, 192);
+    border: 1.4px solid #fff;
     display: flex;
     align-items: center;
     border-radius: 2px;
@@ -93,7 +93,7 @@
 .reduce,
 .raise{
     padding: 10px 16px;
-    background-color: rgb(207, 183, 183);
+    background-color: #fff;
     border-radius: 2px;
     cursor: pointer;
 
@@ -124,7 +124,7 @@
 .time{
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 2px var(--primary-color);
+    box-shadow: 0px 0px 2px #fff;
     width: 110px;
     height: 70px;
     justify-content: center;

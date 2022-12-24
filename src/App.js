@@ -6,7 +6,7 @@ import config from './config';
 
 function App() {
 
-    var kt = 'vendor';
+    var kt = 'customer';
     var login = 'true';
     localStorage.setItem('privilege', kt);
     localStorage.setItem('login', login);
